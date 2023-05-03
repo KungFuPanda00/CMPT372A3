@@ -1,0 +1,12 @@
+<table id="displayNotes" class="m-2 table">
+    <tbody>
+        <tr *ngFor="let note of notes">
+            <td mat-button (click)="openDialog(note)">
+                {{note?.header}}
+            </td>
+            <td>
+                <button type="button" class="btn-close " aria-label="Close" (click)="remove(note)"></button>
+            </td>
+        </tr>
+    </tbody>
+</table>

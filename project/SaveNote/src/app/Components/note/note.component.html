@@ -1,0 +1,11 @@
+
+<form [formGroup]="form" (submit)="onSubmit()" class="text-center">
+<textarea formControlName="subText" name="subText" id="subText" cols="30" rows="10" type="text"></textarea>
+<br>
+<div class="alert alert-danger" *ngIf="form.get('subText')?.touched&& form.get('subText')?.invalid">
+    <div *ngIf="form.get('subText')?.errors?.['required']">
+        Entry is required.
+    </div>
+    </div>
+<button class="btn btn-primary" id="SaveNotes" [disabled]="form.invalid">Save Note</button>
+</form>

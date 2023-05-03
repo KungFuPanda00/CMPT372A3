@@ -1,0 +1,11 @@
+<button mat-icon-button style="float:right;margin:5px;" matDialogClose>
+<mat-icon style="-webkit-text-fill-color:red">close</mat-icon></button>
+<form [formGroup]="form">
+<input formControlName="header" id="header" (keydown)="$event.keyCode == 13 ? $event.preventDefault() : null"  type="text" rows="5" mat-dialog-title style="font-weight:bold; font-size:larger;" class="m-4 border"  (keyup)="textChange()">
+<p class="m-4">Last Modified:</p>
+<pre class="m-4">{{date}}</pre>
+<mat-dialog-content>
+   <textarea formControlName="sub" rows="5" cols="40" type="text" class=" border " (keyup)="textChange()"></textarea>
+</mat-dialog-content>
+<button class="m-4 btn btn-primary btn-block" [disabled]="form.invalid || !buttonDisable"  (click)="submit()">Save</button>
+</form>

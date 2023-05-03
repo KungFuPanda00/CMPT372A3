@@ -1,0 +1,12 @@
+#subText{
+    width: 50%;
+    margin-top: 50px;
+}
+#subText::first-line{
+    font-weight: bold;
+    font-size: 25px;
+}
+#SaveNotes{
+    width: 50%;
+    font-weight: bold;
+}
